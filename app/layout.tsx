@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
-import './globals.css';
-import {
-  Fraunces,
-  Barlow,
-} from 'next/font/google';
+import { Barlow, Fraunces } from 'next/font/google';
 import Header from './components/Header/Header';
+import './globals.css';
 
 export const fraunces = Fraunces({
   subsets: ['latin'],
@@ -17,10 +14,8 @@ const barlow = Barlow({
 });
 
 export const metadata: Metadata = {
-  title:
-    'Coffeeroasters subscription site',
-  description:
-    'Frontend Mentor | Coffeeroasters subscription site',
+  title: 'Coffeeroasters subscription site',
+  description: 'Frontend Mentor | Coffeeroasters subscription site',
 };
 
 export default function RootLayout({
@@ -29,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body
-        className={`${barlow.className} antialiased`}
+        className={`${barlow.className} flex h-screen w-screen justify-center bg-cream px-[24px] pb-[72px] pt-[32px] antialiased sm:px-[40px] sm:pt-[40px] md:px-[80px] md:pb-[87px] md:pt-[43px]`}
       >
         <Header />
         {children}
