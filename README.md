@@ -53,15 +53,21 @@ How to configure tailwind plugins, prettier + eslint:
 1. Install following packages
 
 ```bash
-  npm i -D prettier eslint-config-prettier prettier-plugin-tailwind
+  npm i -D prettier eslint eslint-config-next prettier-plugin-tailwindcss prettier-plugin-organize-imports
 ```
 
-2. Create "prettier.config.js" in the root of your app and paste following snippet:
+2. Create "prettierrc" in the root of your app and paste following snippet:
 
-```js
-module.exports = {
-  plugins: ['prettier-plugin-tailwindcss'],
-};
+```json
+{
+  "plugins": [
+    "prettier-plugin-organize-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+  "singleQuote": true,
+  "semi": true,
+  "pluginSearchDirs": false
+}
 ```
 
 3. Ensure that you have extensions installed – „Tailwind CSS IntelliSense”, „Prettier – Code formatter” and „ESlint”.
@@ -76,7 +82,7 @@ module.exports = {
 
 ```json
 {
-  "extends": ["next/core-web-vitals", "prettier"]
+  "extends": "next/core-web-vitals"
 }
 ```
 
