@@ -11,7 +11,7 @@ export default function NavMobile() {
   return (
     <>
       <button
-        className="sm:hidden"
+        className="md:hidden"
         onClick={() => setIsNavMobileOpen(!isNavMobileOpen)}
       >
         <Image
