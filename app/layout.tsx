@@ -1,17 +1,7 @@
-import type { Metadata } from 'next';
-import { Barlow, Fraunces } from 'next/font/google';
+import { Metadata } from 'next';
 import Header from './components/Header/Header';
+import { barlow } from './fonts/fonts';
 import './globals.css';
-
-export const fraunces = Fraunces({
-  subsets: ['latin'],
-  weight: ['900'],
-});
-
-const barlow = Barlow({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
 
 export const metadata: Metadata = {
   title: 'Coffeeroasters subscription site',
