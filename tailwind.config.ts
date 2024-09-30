@@ -15,6 +15,7 @@ const config: Config = {
         cream: '#FEFCF7',
         greay: '#83888F',
         btnHover: '#66D2CF',
+        chooseBg: '#2c343e',
       },
     },
   },

@@ -7,7 +7,7 @@ import CollectionItem from './CollectionItem';
 
 export default function Collection() {
   return (
-    <article className="relative mb-[120px] flex h-[1321px] w-[285px] flex-col md:mb-[144px] md:h-[927px] md:w-[689px] md:pt-[30px] xl:mb-[200px] xl:h-[525px] xl:w-[1152px] xl:flex-row xl:gap-[30px] xl:pt-[35px]">
+    <article className="relative mb-[270px] flex h-[1321px] w-[285px] flex-col md:mb-[144px] md:h-[927px] md:w-[689px] md:pt-[30px] xl:mb-[200px] xl:h-[525px] xl:w-[1152px] xl:flex-row xl:gap-[30px] xl:pt-[35px]">
       <h2
         className={`${fraunces.className} mb-[13px] text-[40px] leading-[72px] text-greay md:absolute md:right-0 md:top-0 md:-z-10 md:mb-0 md:text-[96px] xl:mr-[50px] xl:text-[150px]`}
       >
