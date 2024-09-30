@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${barlow.className} flex h-screen w-screen flex-col items-center bg-cream px-[24px] pb-[72px] pt-[32px] antialiased md:px-[40px] md:pt-[40px] xl:px-[80px] xl:pb-[87px] xl:pt-[43px]`}
+        className={`${barlow.className} flex w-screen flex-col items-center bg-cream px-[24px] pb-[72px] pt-[32px] antialiased md:px-[40px] md:pt-[40px] xl:px-[80px] xl:pb-[87px] xl:pt-[43px]`}
       >
         <Header />
         {children}
