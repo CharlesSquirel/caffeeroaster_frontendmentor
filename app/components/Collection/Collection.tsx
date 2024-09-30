@@ -1,8 +1,8 @@
-import { fraunces } from '@/app/fonts/fonts';
-import caffeeBrown from '../../../public/caffee_brown.svg';
-import caffeeGreen from '../../../public/caffee_green.svg';
-import caffeeRed from '../../../public/caffee_red.svg';
-import caffeeYellow from '../../../public/caffee_yellow.svg';
+import { fraunces } from '@/fonts/fonts';
+import caffeeBrown from '@/public/caffee_brown.svg';
+import caffeeGreen from '@/public/caffee_green.svg';
+import caffeeRed from '@/public/caffee_red.svg';
+import caffeeYellow from '@/public/caffee_yellow.svg';
 import CollectionItem from './CollectionItem';
 
 export default function Collection() {

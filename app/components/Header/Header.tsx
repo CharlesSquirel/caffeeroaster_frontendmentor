@@ -1,5 +1,5 @@
+import logo from '@/icons/logo.svg';
 import Image from 'next/image';
-import logo from '../../assets/logo.svg';
 import NavMobile from './NavMobile';
 
 export default function Header() {

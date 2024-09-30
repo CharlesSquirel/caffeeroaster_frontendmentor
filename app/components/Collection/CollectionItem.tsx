@@ -1,4 +1,4 @@
-import { fraunces } from '@/app/fonts/fonts';
+import { fraunces } from '@/fonts/fonts';
 import Image from 'next/image';
 
 interface CollectionItemProps {

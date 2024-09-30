@@ -1,4 +1,4 @@
-import { fraunces } from '@/app/fonts/fonts';
+import { fraunces } from '@/fonts/fonts';
 
 export default function PlanButton() {
   return (

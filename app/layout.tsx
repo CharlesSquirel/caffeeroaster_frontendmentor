@@ -1,6 +1,6 @@
+import Header from '@/components/Header/Header';
+import { barlow } from '@/fonts/fonts';
 import { Metadata } from 'next';
-import Header from './components/Header/Header';
-import { barlow } from './fonts/fonts';
 import './globals.css';
 
 export const metadata: Metadata = {

@@ -1,10 +1,10 @@
 'use client';
 
-import { fraunces } from '@/app/fonts/fonts';
+import { fraunces } from '@/fonts/fonts';
+import close from '@/icons/icon-close.svg';
+import hamburger from '@/icons/icon-hamburger.svg';
 import Image from 'next/image';
 import { useState } from 'react';
-import close from '../../assets/icon-close.svg';
-import hamburger from '../../assets/icon-hamburger.svg';
 
 export default function NavMobile() {
   const [isNavMobileOpen, setIsNavMobileOpen] = useState(false);
