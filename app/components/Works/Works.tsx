@@ -1,5 +1,6 @@
 import { fraunces } from '@/fonts/fonts';
 import PlanButton from '../common/PlanButton';
+import Progress from '../common/Progress/Progress';
 import WorksItem from './WorksItem';
 
 interface WorksItemData {
@@ -27,13 +28,14 @@ const worksItems: WorksItemData[] = [
 
 export default function Works() {
   return (
-    <article className="flex w-[327px] flex-col items-center md:w-[689px] md:items-start">
+    <article className="mb-[120px] flex w-[327px] flex-col items-center bg-cream md:mb-[144px] md:w-[689px] md:items-start xl:mb-[200px] xl:w-[1045px]">
       <h2
-        className={`${fraunces.className} mb-[80px] text-center text-[24px] leading-[32px] text-greay md:text-start`}
+        className={`${fraunces.className} mb-[80px] text-center text-[24px] leading-[32px] text-greay md:mb-[40px] md:text-start xl:mb-[80px]`}
       >
         How it works
       </h2>
-      <div>
+      <Progress />
+      <div className="md:mb-[44px] md:flex md:flex-row xl:mb-[64px] xl:w-[1045px]">
         {worksItems.map((item, index) => (
           <WorksItem
             title={item.title}
