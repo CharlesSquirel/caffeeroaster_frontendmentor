@@ -27,21 +27,23 @@ const worksItems: WorksItemData[] = [
 
 export default function Works() {
   return (
-    <article className="flex w-[327px] flex-col items-center">
+    <article className="flex w-[327px] flex-col items-center md:w-[689px] md:items-start">
       <h2
-        className={`${fraunces.className} mb-[80px] text-center text-[24px] leading-[32px] text-greay`}
+        className={`${fraunces.className} mb-[80px] text-center text-[24px] leading-[32px] text-greay md:text-start`}
       >
         How it works
       </h2>
-      {worksItems.map((item, index) => (
-        <WorksItem
-          title={item.title}
-          description={item.description}
-          number={String(index + 1)}
-          isLast={index === worksItems.length - 1}
-          key={index}
-        />
-      ))}
+      <div>
+        {worksItems.map((item, index) => (
+          <WorksItem
+            title={item.title}
+            description={item.description}
+            number={String(index + 1)}
+            isLast={index === worksItems.length - 1}
+            key={index}
+          />
+        ))}
+      </div>
       <PlanButton />
     </article>
   );
