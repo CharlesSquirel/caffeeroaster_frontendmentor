@@ -14,3 +14,12 @@ a {
   font-size: inherit;
   cursor: pointer;
 }
+
+.nav-gradient {
+  background: linear-gradient(
+    to bottom,
+    #fefcf7 0%,
+    #fefcf7 50%,
+    rgba(254, 252, 247, 0) 100%
+  );
+}

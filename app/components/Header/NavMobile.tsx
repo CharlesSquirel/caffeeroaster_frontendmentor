@@ -22,7 +22,7 @@ export default function NavMobile() {
         />
       </button>
       {isNavMobileOpen && (
-        <nav className="to-[rgba(254, 252, 247, 0.5)] absolute left-0 top-[90px] w-full bg-gradient-to-b from-cream via-50%">
+        <nav className="nav-gradient absolute left-0 top-[90px] h-[550px] w-full pt-[50px]">
           <ul
             className={` ${fraunces.className} flex flex-col items-center gap-8 text-2xl uppercase`}
           >
