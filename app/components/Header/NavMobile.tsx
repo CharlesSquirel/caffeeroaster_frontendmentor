@@ -3,11 +3,14 @@
 import { fraunces } from '@/fonts/fonts';
 import close from '@/icons/icon-close.svg';
 import hamburger from '@/icons/icon-hamburger.svg';
+import useOutsideClick from 'app/utils/hooks/useOutsideClick';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 export default function NavMobile() {
   const [isNavMobileOpen, setIsNavMobileOpen] = useState(false);
+  const refContainer = useRef<HTMLDivElement>(null);
+  useOutsideClick(refContainer, () => setIsNavMobileOpen(false));
   return (
     <>
       <button
@@ -22,7 +25,10 @@ export default function NavMobile() {
         />
       </button>
       {isNavMobileOpen && (
-        <nav className="nav-gradient absolute left-0 top-[90px] h-[550px] w-full pt-[50px]">
+        <nav
+          ref={refContainer}
+          className="nav-gradient absolute left-[50%] top-[90px] h-[550px] w-[355px] translate-x-[-50%] pt-[50px]"
+        >
           <ul
             className={` ${fraunces.className} flex flex-col items-center gap-8 text-2xl uppercase`}
           >
