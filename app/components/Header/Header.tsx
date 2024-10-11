@@ -1,3 +1,5 @@
+import { navLinks } from 'app/data/navLinks';
+import Link from 'next/link';
 import Logo from '../common/Logo/Logo';
 import NavMobile from './NavMobile';
 
@@ -7,9 +9,11 @@ export default function Header() {
       <Logo width={163} height={18} textColor="dark" />
       <nav className="hidden md:block">
         <ul className="flex gap-8 text-sm font-bold uppercase tracking-[0.92px] text-greay">
-          <li className="hover:text-blueDark">Home</li>
-          <li className="hover:text-blueDark">About us</li>
-          <li className="hover:text-blueDark">Create your plan</li>
+          {navLinks.map((link, index) => (
+            <li key={index} className="hover:text-blueDark">
+              <Link href={link.href}>{link.text}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
       <NavMobile />

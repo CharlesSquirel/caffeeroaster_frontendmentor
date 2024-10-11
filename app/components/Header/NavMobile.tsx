@@ -3,17 +3,21 @@
 import { fraunces } from '@/fonts/fonts';
 import close from '@/icons/icon-close.svg';
 import hamburger from '@/icons/icon-hamburger.svg';
+import { navLinks } from 'app/data/navLinks';
 import useOutsideClick from 'app/utils/hooks/useOutsideClick';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRef, useState } from 'react';
 
 export default function NavMobile() {
   const [isNavMobileOpen, setIsNavMobileOpen] = useState(false);
   const refContainer = useRef<HTMLDivElement>(null);
-  useOutsideClick(refContainer, () => setIsNavMobileOpen(false));
+  const refBtn = useRef<HTMLButtonElement>(null);
+  useOutsideClick(refContainer, refBtn, () => setIsNavMobileOpen(false));
   return (
     <>
       <button
+        ref={refBtn}
         className="md:hidden"
         onClick={() => setIsNavMobileOpen(!isNavMobileOpen)}
       >
@@ -32,9 +36,11 @@ export default function NavMobile() {
           <ul
             className={` ${fraunces.className} flex flex-col items-center gap-8 text-2xl uppercase`}
           >
-            <li>Home</li>
-            <li>About us</li>
-            <li>Create your plan</li>
+            {navLinks.map((link, index) => (
+              <li key={index} onClick={() => setIsNavMobileOpen(false)}>
+                <Link href={link.href}>{link.text}</Link>
+              </li>
+            ))}
           </ul>
         </nav>
       )}
