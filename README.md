@@ -48,7 +48,7 @@ Users should be able to:
 
 ### What I learned
 
-How to configure tailwind plugins, prettier + eslint:
+I How to configure tailwind plugins, prettier + eslint:
 
 1. Install following packages
 
@@ -85,6 +85,10 @@ How to configure tailwind plugins, prettier + eslint:
   "extends": "next/core-web-vitals"
 }
 ```
+
+II I used my custom useOutsideClickHook (in progress)
+
+III I searched for better img optimization. Advanced usage the Image component in Next (in progress)
 
 ### Useful resources
 
