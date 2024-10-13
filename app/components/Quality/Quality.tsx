@@ -1,16 +1,29 @@
 import { fraunces } from '@/fonts/fonts';
-import Image from 'next/image';
-import qualityImg from '../../../public/quality.webp';
+import ArtDirectionImage from '../common/ArtDirectionImage/ArtDirectionImage';
 
 export default function Quality() {
   return (
     <article className="relative mb-[120px] flex h-[587px] w-[327px] flex-col items-center md:mb-[144px] md:h-[648px] md:w-[688px] xl:mb-[168px] xl:h-[562px] xl:w-[1280px] xl:flex-row-reverse xl:gap-[148px] xl:px-[85px]">
-      <Image
-        src={qualityImg}
+      <ArtDirectionImage
         alt="Cup of a caffee"
-        className="mb-[64px] h-[156px] w-[279px] rounded-lg object-cover object-bottom md:h-[320px] md:w-[573px] xl:h-[474px] xl:w-[445px] xl:object-center"
+        className="mb-[64px] rounded-lg object-cover object-bottom xl:object-center"
+        mobileImg={{
+          src: '/quality_mobile.jpg',
+          width: 279,
+          height: 156,
+        }}
+        tabletImg={{
+          src: '/quality_tablet.jpg',
+          width: 573,
+          height: 320,
+        }}
+        desktopImg={{
+          src: '/quality.jpg',
+          width: 445,
+          height: 474,
+        }}
       />
-      <div className="flex flex-col gap-[24px] px-[24px] text-center text-cream md:px-[74px] xl:gap-[32px] xl:px-0 xl:text-left">
+      <div className="flex flex-col gap-[24px] px-[24px] text-center text-cream md:px-[74px] xl:w-[540px] xl:gap-[32px] xl:px-0 xl:text-left">
         <h2
           className={`${fraunces.className} text-[28px] leading-[28px] md:text-[32px] md:leading-[48px] xl:text-[40px]`}
         >
