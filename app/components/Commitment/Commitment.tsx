@@ -1,18 +1,29 @@
 import { fraunces } from '@/fonts/fonts';
-import Image from 'next/image';
-import commitmentImg from '../../../public/commitment.webp';
+import ArtDirectionImage from '../common/ArtDirectionImage/ArtDirectionImage';
 
 export default function Commitment() {
   return (
     <article className="mb-[120px] flex w-[327px] flex-col gap-[48px] md:mb-[144px] md:w-[689px] md:flex-row md:items-center md:gap-[69px] xl:mb-[168px] xl:w-[1110px] xl:gap-[125px]">
-      <Image
-        src={commitmentImg}
+      <ArtDirectionImage
         alt="Man preparing a coffee"
-        width={327}
-        height={400}
-        className="rounded-lg object-cover md:h-[470px] md:w-[281px] xl:h-[520px] xl:w-[445px]"
+        className="rounded-lg object-cover"
+        mobileImg={{
+          src: '/commitment_mobile.webp',
+          width: 327,
+          height: 400,
+        }}
+        tabletImg={{
+          src: '/commitment_tablet.webp',
+          width: 281,
+          height: 470,
+        }}
+        desktopImg={{
+          src: '/commitment.webp',
+          width: 445,
+          height: 520,
+        }}
       />
-      <div className="flex flex-col gap-[30px] text-blueDark xl:gap-[32px]">
+      <div className="flex flex-col gap-[30px] text-blueDark md:w-[339px] xl:w-[540px] xl:gap-[32px]">
         <h2
           className={`${fraunces.className} text-center text-[32px] leading-[48px] md:text-left xl:text-[40px]`}
         >

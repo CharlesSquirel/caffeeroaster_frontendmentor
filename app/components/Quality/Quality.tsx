@@ -8,17 +8,17 @@ export default function Quality() {
         alt="Cup of a caffee"
         className="mb-[64px] rounded-lg object-cover object-bottom xl:object-center"
         mobileImg={{
-          src: '/quality_mobile.jpg',
+          src: '/quality_mobile.webp',
           width: 279,
           height: 156,
         }}
         tabletImg={{
-          src: '/quality_tablet.jpg',
+          src: '/quality_tablet.webp',
           width: 573,
           height: 320,
         }}
         desktopImg={{
-          src: '/quality.jpg',
+          src: '/quality.webp',
           width: 445,
           height: 474,
         }}
