@@ -21,11 +21,11 @@ export default function WorksItem({
         className={`${fraunces.className} text-center text-[72px] font-bold text-orange md:text-left`}
       >{`0${number}`}</p>
       <h3
-        className={`${fraunces.className} text-center text-[28px] leading-[32px] text-blueDark md:text-left`}
+        className={`${fraunces.className} text-center text-[28px] leading-[32px] md:text-left`}
       >
         {title}
       </h3>
-      <p className="text-center text-[15px] leading-[25px] text-blueDark md:text-start xl:text-[16px] xl:leading-[26px]">
+      <p className="text-center text-[15px] leading-[25px] md:text-start xl:text-[16px] xl:leading-[26px]">
         {description}
       </p>
     </div>
