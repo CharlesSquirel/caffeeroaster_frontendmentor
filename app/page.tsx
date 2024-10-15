@@ -9,7 +9,7 @@ export default function Home() {
       <Hero />
       <Collection />
       <Choose />
-      <Works />
+      <Works mode="light" />
     </>
   );
 }
