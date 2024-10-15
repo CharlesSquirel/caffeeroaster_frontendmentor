@@ -16,6 +16,7 @@ const config: Config = {
         greay: '#83888F',
         btnHover: '#66D2CF',
         chooseBg: '#2c343e',
+        dropdownOptionBg: '#F4F1EB',
       },
     },
   },
