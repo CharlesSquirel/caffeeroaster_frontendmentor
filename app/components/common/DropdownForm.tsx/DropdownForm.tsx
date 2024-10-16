@@ -18,25 +18,24 @@ export default function DropdownForm({
     index === 0 ? true : false,
   );
   const [activeDropdown, setActiveDropdown] = useState('');
-  const handleOnClick = (name: string): void => {
-    console.log('Wywoluje sie' + name);
-    // setActiveDropdown(name); // Możesz zobaczyć, co się dzieje w konsoli
+
+  const handleOnClick = (value: string): void => {
+    setActiveDropdown(value);
   };
-  console.log('activeDropdown:', activeDropdown);
+
   const childrenWithProps = React.Children.map(children, (child) => {
     if (React.isValidElement(child)) {
-      // console.log('Original child:', child); // Debugowanie
       const clonedChild = React.cloneElement(child as ReactElement<any>, {
         handleOnClick: handleOnClick,
+        activeDropdown: activeDropdown,
       });
-      // console.log('Cloned child:', clonedChild); // Debugowanie
       return clonedChild;
     }
     return child;
   });
 
   return (
-    <div className="flex flex-col gap-[16px] text-greay">
+    <div className="flex w-[328px] flex-col gap-[16px] text-greay">
       <div className="mb-[16px] flex items-center justify-between">
         <h2
           className={`${fraunces.className} w-[240px] text-[24px] leading-[28px]`}

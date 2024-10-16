@@ -157,6 +157,20 @@ export default function ArtDirectionImage({
 
 ```
 
+IV How to pass props to children prop in parent component using React.clone
+
+```js
+  const childrenWithProps = React.Children.map(children, (child) => {
+    if (React.isValidElement(child)) {
+      const clonedChild = React.cloneElement(child as ReactElement<any>, {
+        propeToBePassed: propValue
+      });
+      return clonedChild;
+    }
+    return child;
+  });
+```
+
 ### Useful resources
 
 - [Tiny png](https://tinypng.com/) - This is quite famous tool for optimizing images, but I've started using it more right now.
