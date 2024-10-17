@@ -1,3 +1,4 @@
+import { blankedSeparator } from '@/components/Summary/SummaryDynamicInfo';
 import { DrinkEnum } from '../types/formTypes';
 
 export const mapDrink = (text: DrinkEnum): string => {
@@ -9,7 +10,7 @@ export const mapDrink = (text: DrinkEnum): string => {
     case DrinkEnum.FILTER:
       return ' Filter';
     default:
-      return ' ? ';
+      return blankedSeparator;
   }
 };
 

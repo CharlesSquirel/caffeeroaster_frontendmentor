@@ -2,7 +2,12 @@
 
 import { fraunces } from '@/fonts/fonts';
 import ArrowUp from '@/icons/ArrowIcon';
-import React, { PropsWithChildren, ReactElement, useState } from 'react';
+import React, {
+  PropsWithChildren,
+  ReactElement,
+  useEffect,
+  useState,
+} from 'react';
 import { useFormContext } from 'react-hook-form';
 
 interface DropdownFormProps {
@@ -40,6 +45,12 @@ export default function DropdownForm({
 
   const isDisabled = how_drink === 'capsule' && index === 3;
 
+  useEffect(() => {
+    if (how_drink === 'capsule' && index === 3) {
+      setIsDropdownActive(false); // Close the dropdown with index 3 if capsule is selected
+    }
+  }, [how_drink, index]);
+
   return (
     <div
       className={`${isDisabled && 'opacity-50'} flex w-[328px] flex-col gap-[16px] text-greay`}
@@ -52,7 +63,9 @@ export default function DropdownForm({
         </h2>
         <ArrowUp
           className={`${isDropdownActive && 'rotate-180'} ${isDisabled && 'pointer-events-none'} cursor-pointer`}
-          onClick={() => setIsDropdownActive(!isDropdownActive)}
+          onClick={() => {
+            setIsDropdownActive(!isDropdownActive);
+          }}
         />
       </div>
       {isDropdownActive && childrenWithProps}
