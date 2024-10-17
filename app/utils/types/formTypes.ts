@@ -29,9 +29,9 @@ enum DrinkEnum {
 }
 
 export interface FormTypes {
-  how_drink: DrinkEnum;
-  type: TypeEnum;
-  grammage: GrammageEnum;
-  grind: GrindEnum;
-  deliver: DeliverEnum;
+  how_drink: DrinkEnum | '';
+  type: TypeEnum | '';
+  grammage: GrammageEnum | '';
+  grind: GrindEnum | '';
+  deliver: DeliverEnum | '';
 }

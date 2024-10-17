@@ -4,6 +4,7 @@ import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import DropdownForm from '../common/DropdownForm.tsx/DropdownForm';
 import DropdownOption from '../common/DropdownOption/DropdownOption';
 import PlanButton from '../common/PlanButton';
+import Summary from '../Summary/Summary';
 
 export default function CreateForm() {
   const methods = useForm<FormData>();
@@ -36,6 +37,7 @@ export default function CreateForm() {
             />
           </DropdownForm>
         ))}
+        <Summary />
         <PlanButton mode="submit" />
       </form>
     </FormProvider>
