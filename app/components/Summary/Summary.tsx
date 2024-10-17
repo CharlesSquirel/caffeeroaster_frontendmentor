@@ -13,9 +13,9 @@ export default function Summary() {
     'grind',
     'deliver',
   ]);
-  const isButtonDisabled = [how_drink, type, grammage, grind, deliver].some(
-    (value) => value === '',
-  );
+  const isButtonDisabled =
+    [how_drink, type, grammage, deliver].some((value) => value === '') &&
+    !(how_drink === 'capsule' && grind === '');
   return (
     <>
       <article className="mb-[56px] flex w-[328px] flex-col gap-2 rounded-[10px] bg-chooseBg px-6 py-8 text-white">

@@ -25,7 +25,7 @@ export default function DropdownForm({
     index === 0 ? true : false,
   );
 
-  const { watch } = useFormContext();
+  const { watch, setValue } = useFormContext();
   const [how_drink] = watch(['how_drink']);
 
   const handleOnClick = (value: string): void => {
@@ -47,9 +47,11 @@ export default function DropdownForm({
 
   useEffect(() => {
     if (how_drink === 'capsule' && index === 3) {
-      setIsDropdownActive(false); // Close the dropdown with index 3 if capsule is selected
+      setIsDropdownActive(false);
+      setValue('grind', '');
+      setActiveDropdown('');
     }
-  }, [how_drink, index]);
+  }, [how_drink, index, setValue]);
 
   return (
     <div
