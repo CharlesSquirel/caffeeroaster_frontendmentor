@@ -1,28 +1,28 @@
-enum DeliverEnum {
+export enum DeliverEnum {
   WEEK = 'week',
   WEEKS = '2 weeks',
   MONTH = 'month',
 }
 
-enum GrindEnum {
+export enum GrindEnum {
   WHOLEBEAN = 'wholebean',
   FILTER = 'filter',
   CAFETERIE = 'cafetiére',
 }
 
-enum GrammageEnum {
-  SMALL = '250g',
-  MEDIUM = '500g',
-  LARGE = '1000g',
+export enum GrammageEnum {
+  SMALL = '250',
+  MEDIUM = '500',
+  LARGE = '1000',
 }
 
-enum TypeEnum {
-  ORIGIN = 'origin',
+export enum TypeEnum {
+  ORIGIN = 'single origin',
   DECAF = 'decaf',
   BLENDED = 'blended',
 }
 
-enum DrinkEnum {
+export enum DrinkEnum {
   CAPSULE = 'capsule',
   FILTER = 'filter',
   EXPRESSO = 'expresso',

@@ -42,7 +42,7 @@ export const dropdownData: DropdownDataInterface[] = [
       option_first_title: 'Single origin',
       option_first_description:
         'Distinct, high quality coffee from a specific family-owned farm',
-      option_first_value: 'origin',
+      option_first_value: 'single origin',
       option_second_title: 'Decaf',
       option_second_description:
         'Just like regular coffee, except the caffeine has been removed',
@@ -60,15 +60,15 @@ export const dropdownData: DropdownDataInterface[] = [
       option_first_title: '250g',
       option_first_description:
         'Perfect for the solo drinker. Yields about 12 delicious cups.',
-      option_first_value: '250g',
+      option_first_value: '250',
       option_second_title: '500g',
       option_second_description:
         'Perfect option for a couple. Yields about 40 delectable cups.',
-      option_second_value: '500g',
+      option_second_value: '500',
       option_third_title: '1000g',
       option_third_description:
         'Perfect for offices and events. Yields about 90 delightful cups.',
-      option_third_value: '1000g',
+      option_third_value: '1000',
     },
   },
   {
