@@ -6,7 +6,11 @@ import { useFormContext } from 'react-hook-form';
 
 export const blankedSeparator = ' _____ ';
 
-export default function SummaryDynamicInfo() {
+interface SummaryDynamicInfoProps {
+  mode: 'form' | 'order';
+}
+
+export default function SummaryDynamicInfo({ mode }: SummaryDynamicInfoProps) {
   const { watch } = useFormContext();
   const [how_drink, type, grammage, grind, deliver] = watch([
     'how_drink',
@@ -20,7 +24,9 @@ export default function SummaryDynamicInfo() {
   const mappedDrinkPrefix = mapDrinkPrefix(how_drink);
 
   return (
-    <p className={`${fraunces.className} text-[24px] leading-[40px]`}>
+    <p
+      className={`${fraunces.className} ${mode === 'form' ? 'text-white' : 'text-greay'} text-[24px] leading-[40px]`}
+    >
       “I drink my coffee {mappedDrinkPrefix}
       <span className="text-cyan">{mappedDrink}</span>, with a
       <span className="capitalize text-cyan">
