@@ -6,7 +6,6 @@ This is a solution to the [Coffeeroasters subscription site challenge on Fronten
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -24,10 +23,6 @@ Users should be able to:
 - See hover states for all interactive elements throughout the site
 - Make selections to create a coffee subscription and see an order summary modal of their choices
 
-### Screenshot
-
-![](./screenshot.jpg)
-
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
@@ -37,14 +32,13 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- React Hook Form
 
 ### What I learned
 
@@ -86,7 +80,36 @@ I How to configure tailwind plugins, prettier + eslint:
 }
 ```
 
-II I used my custom useOutsideClickHook (in progress)
+II I used my custom useOutsideClickHook
+
+```js
+import { useEffect } from 'react';
+
+export const useOutsideClick = (
+  ref: React.RefObject<HTMLElement>,
+  refException: React.RefObject<HTMLElement>,
+  callback: () => void,
+) => {
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        ref.current &&
+        !ref.current.contains(event.target as Node) &&
+        refException.current &&
+        !refException.current.contains(event.target as Node)
+      ) {
+        callback();
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [ref, callback, refException]);
+};
+export default useOutsideClick;
+
+```
 
 III I searched for better img optimization. Advanced usage the Image component in Next (in progress)
 
@@ -222,10 +245,8 @@ export default useBlurBackground;
 ### Useful resources
 
 - [Tiny png](https://tinypng.com/) - This is quite famous tool for optimizing images, but I've started using it more right now.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@CharlesSquirel](https://www.frontendmentor.io/profile/CharlesSquirel)
+- Github - [@CharlesSquirel](https://github.com/CharlesSquirel)
