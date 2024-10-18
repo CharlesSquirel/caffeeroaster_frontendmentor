@@ -83,5 +83,5 @@ export const calculatePrice = (
       return 'Invalid grammage or delivery option';
   }
 
-  return String(price);
+  return `$${price.toFixed(2)}`;
 };

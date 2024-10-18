@@ -21,7 +21,7 @@ export default function CheckoutButton({
       className={`${fraunces.className} h-[56px] w-[279px] rounded-[8px] bg-cyan text-[18px] leading-[25px] text-cream`}
       onClick={onClick}
     >
-      {`Checkout – ${orderPrice}/${mapDeliver(deliver)}`}
+      {`Checkout - ${orderPrice} / ${mapDeliver(deliver)}`}
     </button>
   );
 }

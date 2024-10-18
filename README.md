@@ -171,6 +171,54 @@ IV How to pass props to children prop in parent component using React.clone
   });
 ```
 
+V Custom hook that blurs the background behind modal (with GPT help)
+
+```js
+import { useEffect } from 'react';
+
+function useBlurBackground(modalRef: React.RefObject<HTMLElement>) {
+  useEffect(() => {
+    if (!modalRef.current) return;
+
+    const modalElement = modalRef.current;
+
+    const backdrop = document.createElement('div');
+    backdrop.style.position = 'fixed';
+    backdrop.style.top = '0';
+    backdrop.style.left = '0';
+    backdrop.style.width = '100vw';
+    backdrop.style.height = '100vh';
+    backdrop.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    backdrop.style.zIndex = '1000';
+    document.body.appendChild(backdrop);
+
+    const allElements = Array.from(document.body.children) as HTMLElement[];
+
+    allElements.forEach((el) => {
+      if (
+        !modalElement.contains(el) &&
+        el !== modalElement &&
+        el !== backdrop
+      ) {
+        el.style.filter = 'blur(5px)';
+      }
+    });
+
+    return () => {
+      allElements.forEach((el) => {
+        if (el.style.filter === 'blur(5px)') {
+          el.style.filter = '';
+        }
+      });
+      document.body.removeChild(backdrop);
+    };
+  }, [modalRef]);
+}
+
+export default useBlurBackground;
+
+```
+
 ### Useful resources
 
 - [Tiny png](https://tinypng.com/) - This is quite famous tool for optimizing images, but I've started using it more right now.
