@@ -1,3 +1,5 @@
+'use client';
+
 import { fraunces } from '@/fonts/fonts';
 import useBlurBackground from 'app/utils/hooks/useBackgroundBlur';
 import { DeliverEnum, GrammageEnum } from 'app/utils/types/formTypes';

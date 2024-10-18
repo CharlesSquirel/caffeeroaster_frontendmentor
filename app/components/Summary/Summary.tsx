@@ -20,6 +20,11 @@ export default function Summary() {
   const isButtonDisabled =
     [how_drink, type, grammage, deliver].some((value) => value === '') &&
     !(how_drink === 'capsule' && grind === '');
+  const { reset } = useFormContext();
+  const handleCloseModal = () => {
+    setShowModal(false);
+    reset();
+  };
   return (
     <>
       <article className="mb-[56px] flex w-[328px] flex-col gap-2 rounded-[10px] bg-chooseBg px-6 py-8 md:mb-[67px] md:w-[689px] md:px-[43px] md:py-[27px] xl:mb-[40px] xl:w-[730px] xl:px-[64px] xl:py-[47px]">
@@ -38,7 +43,7 @@ export default function Summary() {
           <SummaryModal
             grammage={grammage}
             deliver={deliver}
-            onModalClose={() => setShowModal(false)}
+            onModalClose={handleCloseModal}
           />,
           document.body,
         )}
