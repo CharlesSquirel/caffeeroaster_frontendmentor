@@ -55,11 +55,11 @@ export default function DropdownForm({
 
   return (
     <div
-      className={`${isDisabled && 'opacity-50'} flex w-[328px] flex-col gap-[16px] text-greay`}
+      className={`${isDisabled && 'opacity-50'} flex w-[328px] flex-col gap-[16px] text-greay md:w-[689px] xl:w-[730px]`}
     >
       <div className="mb-[16px] flex items-center justify-between">
         <h2
-          className={`${fraunces.className} w-[240px] text-[24px] leading-[28px]`}
+          className={`${fraunces.className} w-[240px] text-[24px] leading-[28px] md:w-auto md:text-[32px] md:leading-[48px] xl:text-[40px] xl:leading-[38px]`}
         >
           {title}
         </h2>
@@ -70,7 +70,9 @@ export default function DropdownForm({
           }}
         />
       </div>
-      {isDropdownActive && childrenWithProps}
+      <div className="flex w-full flex-col gap-[16px] md:flex-row md:gap-[8px] xl:gap-[23px]">
+        {isDropdownActive && childrenWithProps}
+      </div>
     </div>
   );
 }

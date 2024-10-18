@@ -20,10 +20,9 @@ export default function Summary() {
   const isButtonDisabled =
     [how_drink, type, grammage, deliver].some((value) => value === '') &&
     !(how_drink === 'capsule' && grind === '');
-  console.log(`show modal:`, showModal);
   return (
     <>
-      <article className="mb-[56px] flex w-[328px] flex-col gap-2 rounded-[10px] bg-chooseBg px-6 py-8">
+      <article className="mb-[56px] flex w-[328px] flex-col gap-2 rounded-[10px] bg-chooseBg px-6 py-8 md:mb-[67px] md:w-[689px] md:px-[43px] md:py-[27px] xl:mb-[40px] xl:w-[730px] xl:px-[64px] xl:py-[47px]">
         <h3 className="text-base uppercase text-white opacity-50">
           Order Summary
         </h3>

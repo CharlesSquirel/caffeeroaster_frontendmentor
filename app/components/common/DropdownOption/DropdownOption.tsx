@@ -27,7 +27,7 @@ export default function DropdownOption({
 
   return (
     <div
-      className={`${activeDropdown === value ? 'pointer-events-none bg-cyan text-white' : 'bg-dropdownOptionBg hover:bg-orange'} flex w-[328px] cursor-pointer flex-col gap-[8px] rounded-[8px] p-[24px] text-blueDark`}
+      className={`${activeDropdown === value ? 'pointer-events-none bg-cyan text-white' : 'bg-dropdownOptionBg hover:bg-orange'} flex w-[328px] cursor-pointer flex-col rounded-[8px] p-[24px] text-blueDark md:w-[223px] md:gap-[10px] md:pb-[84px] md:pt-[32px] xl:w-[228px] xl:gap-[24px] xl:px-[28px]`}
       onClick={() => {
         handleOnClick(value);
         handleOnRegister();
@@ -36,7 +36,9 @@ export default function DropdownOption({
       <h3 className={`${fraunces.className} text-[24px] leading-[32px]`}>
         {title}
       </h3>
-      <p className="text-base">{description}</p>
+      <p className="text-base xl:text-[16px] xl:leading-[26px]">
+        {description}
+      </p>
     </div>
   );
 }

@@ -31,7 +31,7 @@ export default function NavMobile() {
       {isNavMobileOpen && (
         <nav
           ref={refContainer}
-          className="nav-gradient absolute left-[50%] top-[90px] h-[550px] w-[355px] translate-x-[-50%] pt-[50px]"
+          className="nav-gradient absolute left-[50%] top-[90px] z-10 h-[550px] w-[355px] translate-x-[-50%] pt-[50px]"
         >
           <ul
             className={` ${fraunces.className} flex flex-col items-center gap-8 text-2xl uppercase`}
