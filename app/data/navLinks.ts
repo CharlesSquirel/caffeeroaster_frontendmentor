@@ -14,6 +14,6 @@ export const navLinks: navLinksProps[] = [
   },
   {
     text: 'Create your plan',
-    href: '/create',
+    href: '/plan',
   },
 ];
