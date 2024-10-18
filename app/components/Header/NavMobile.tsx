@@ -13,7 +13,7 @@ export default function NavMobile() {
   const [isNavMobileOpen, setIsNavMobileOpen] = useState(false);
   const refContainer = useRef<HTMLDivElement>(null);
   const refBtn = useRef<HTMLButtonElement>(null);
-  useOutsideClick(refContainer, refBtn, () => setIsNavMobileOpen(false));
+  useOutsideClick(refContainer, () => setIsNavMobileOpen(false), refBtn);
   return (
     <>
       <button

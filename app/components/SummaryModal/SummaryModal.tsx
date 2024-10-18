@@ -2,6 +2,7 @@
 
 import { fraunces } from '@/fonts/fonts';
 import useBlurBackground from 'app/utils/hooks/useBackgroundBlur';
+import useOutsideClick from 'app/utils/hooks/useOutsideClick';
 import { DeliverEnum, GrammageEnum } from 'app/utils/types/formTypes';
 import { useRef } from 'react';
 import CheckoutButton from '../CheckoutButton.tsx/CheckoutButton';
@@ -20,6 +21,7 @@ export default function SummaryModal({
 }: SummaryModalProps) {
   const modalRef = useRef<HTMLElement>(null);
   useBlurBackground(modalRef);
+  useOutsideClick(modalRef, onModalClose);
   return (
     <article
       className="fixed left-[50%] top-[35px] z-[1010] flex w-[327px] translate-x-[-50%] flex-col rounded-[8px] bg-cream"
