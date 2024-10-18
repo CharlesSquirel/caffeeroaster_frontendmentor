@@ -42,7 +42,7 @@ Users should be able to:
 
 ### What I learned
 
-I How to configure tailwind plugins, prettier + eslint:
+I **How to configure tailwind plugins, prettier + eslint:**
 
 1. Install following packages
 
@@ -50,7 +50,7 @@ I How to configure tailwind plugins, prettier + eslint:
   npm i -D prettier eslint eslint-config-next prettier-plugin-tailwindcss prettier-plugin-organize-imports
 ```
 
-2. Create "prettierrc" in the root of your app and paste following snippet:
+2. **Create "prettierrc" in the root of your app and paste following snippet:**
 
 ```json
 {
@@ -80,7 +80,7 @@ I How to configure tailwind plugins, prettier + eslint:
 }
 ```
 
-II I used my custom useOutsideClickHook
+II **I used my custom useOutsideClickHook**
 
 ```js
 import { useEffect } from 'react';
@@ -111,7 +111,7 @@ export default useOutsideClick;
 
 ```
 
-III I searched for better img optimization. Advanced usage the Image component in Next (in progress)
+III **I searched for better img optimization. Advanced usage the Image component in Next**
 
 1. Art Direction Image component based on docs:
 
@@ -180,7 +180,7 @@ export default function ArtDirectionImage({
 
 ```
 
-IV How to pass props to children prop in parent component using React.clone
+IV **How to pass props to children prop in parent component using React.clone**
 
 ```js
   const childrenWithProps = React.Children.map(children, (child) => {
@@ -194,7 +194,7 @@ IV How to pass props to children prop in parent component using React.clone
   });
 ```
 
-V Custom hook that blurs the background behind modal (with GPT help)
+V **Custom hook that blurs the background behind modal (with GPT help)**
 
 ```js
 import { useEffect } from 'react';
