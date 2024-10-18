@@ -21,7 +21,7 @@ export default function SummaryModal({
 }: SummaryModalProps) {
   const modalRef = useRef<HTMLElement>(null);
   useBlurBackground(modalRef);
-  useOutsideClick(modalRef, onModalClose);
+  useOutsideClick(modalRef, onModalClose, modalRef);
   return (
     <article
       className="fixed left-[50%] top-[35px] z-[1010] flex w-[327px] translate-x-[-50%] flex-col rounded-[8px] bg-cream"
